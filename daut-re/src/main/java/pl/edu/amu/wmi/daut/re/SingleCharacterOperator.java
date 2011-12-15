@@ -34,10 +34,7 @@ public class SingleCharacterOperator extends NullaryRegexpOperator {
     @Override
     public AutomatonSpecification createFixedAutomaton() {
 
-        AutomatonSpecification automaton = new NaiveAutomatonSpecification();
-        automaton.makeOneTransitionAutomaton(character);
-
-        return automaton;
+        return new NaiveAutomatonSpecification().makeOneTransitionAutomaton(character);
     }
 
      /**
